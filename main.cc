@@ -267,7 +267,7 @@ int main()
     VERIFY(m0 == trans123);
 
     // point transform by matrix
-    result = multiplyMatrix(trans123, pZero); // FRÅGA HUR JAG GÖR DET SOM OPERATOR *
+    result = multiplyMatrix(trans123, pZero); // FRï¿½GA HUR JAG Gï¿½R DET SOM OPERATOR *
     VERIFY((result == pOneTwoThree));
 
     // multiplication and multiplication order, transform point by matrix
@@ -376,6 +376,7 @@ int main()
                                     vec4(      0.0f, 2.11053f,       0.0f,  0.0f),
                                     vec4(      0.0f,     0.0f, -1.004008f, -1.0f),
                                     vec4(      0.0f,     0.0f,  -0.2004008f,   0.0f))));
+
 #endif
 #endif
 
@@ -460,7 +461,7 @@ vec4 normalize(const vec4& v4)
 }
 
 
-float determinant4D(mat4& m)//kan säkert förbättras
+float determinant4D(mat4& m)//kan sï¿½kert fï¿½rbï¿½ttras
 {
     int inverter = 1;
     float answer = 0;
@@ -538,17 +539,17 @@ float determinant2D(float row1[], float row2[])
 }
 
 
-mat4 rotationx(float rad)                                           //ska man ignorera den fjärde rad och colum?? FRÅGA OM DETTA
+mat4 rotationx(float rad)                                           //ska man ignorera den fjï¿½rde rad och colum?? FRï¿½GA OM DETTA
 {
     return transpose(mat4(vec4(1, 0, 0, 0), vec4(0, cos(rad), -sin(rad), 0), vec4(0, sin(rad), cos(rad), 0), vec4(0, 0, 0, 1)));
 }
 
-mat4 rotationy(float rad)//ska man ignorera den fjärde rad och colum?? FRÅGA OM DETTA
+mat4 rotationy(float rad)//ska man ignorera den fjï¿½rde rad och colum?? FRï¿½GA OM DETTA
 {
     return transpose(mat4(vec4(cos(rad), 0, sin(rad), 0), vec4(0, 1, 0, 0), vec4(-sin(rad), 0, cos(rad), 0), vec4(0, 0, 0, 1)));
 }
 
-mat4 rotationz(float rad)//ska man ignorera den fjärde rad och colum?? FRÅGA OM DETTA
+mat4 rotationz(float rad)//ska man ignorera den fjï¿½rde rad och colum?? FRï¿½GA OM DETTA
 {
     return transpose(mat4(vec4(cos(rad), -sin(rad), 0, 0), vec4(sin(rad), cos(rad), 0, 0), vec4(0, 0, 1, 0), vec4(0, 0, 0, 1)));
 }
@@ -558,7 +559,7 @@ mat4 rotationaxis(vec3 v, float rad)//kan vara fel
     return transpose(mat4(vec4(cos(rad) + v[0] * v[0] * (1 - cos(rad)), v[0] * v[1] * (1 - cos(rad)) - v[2] * sin(rad), v[0] * v[2] * (1 - cos(rad)) + v[1] * sin(rad), 0), vec4(v[1] * v[0] * (1 - cos(rad)) + v[2] * sin(rad), cos(rad) + v[1] * v[1] * (1 - cos(rad)), v[1] * v[2] * (1 - cos(rad)) - v[0] * sin(rad), 0), vec4(v[2] * v[0] * (1 - cos(rad)) - v[1] * sin(rad), v[2] * v[1] * (1 - cos(rad)) + v[0] * sin(rad), cos(rad) + v[2] * v[2] * (1 - cos(rad)), 0), vec4(0, 0, 0, 1)));
 }
 
-vec4 multiplyMatrix(mat4& rhs, vec4& v) //FRÅGA OM DENNA, VARFÖR KAN JAG INTE HA 2 stycknar operator*?
+vec4 multiplyMatrix(mat4& rhs, vec4& v) //FRï¿½GA OM DENNA, VARFï¿½R KAN JAG INTE HA 2 stycknar operator*?
 {
     vec4 answer;
     	
