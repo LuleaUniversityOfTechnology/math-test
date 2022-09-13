@@ -5,22 +5,22 @@
 
 inline vec3 max(vec3 a, vec3 b)
 {
-    return vec3(fmax(a.x, b.x), fmax(a.y, b.y), fmax(a.z, b.z));
+    return vec3(fmax(a[0], b[0]), fmax(a[1], b[1]), fmax(a[2], b[2]));
 }
 
 inline vec4 max(vec4 a, vec4 b)
 {
-    return vec4(fmax(a.x, b.x), fmax(a.y, b.y), fmax(a.z, b.z), fmax(a.w, b.w));
+    return vec4(fmax(a[0], b[0]), fmax(a[1], b[1]), fmax(a[2], b[2]), fmax(a[3], b[3]));
 }
 
 inline bool cmple(vec3 a, vec3 b)
 {
-    return a.x <= b.x && a.y <= b.y && a.z <= b.z;
+    return a[0] <= b[0] && a[1] <= b[1] && a[2] <= b[2];
 }
 
 inline bool cmple(vec4 a, vec4 b)
 {
-    return a.x <= b.x && a.y <= b.y && a.z <= b.z && a.w <= b.w;
+    return a[0] <= b[0] && a[1] <= b[1] && a[2] <= b[2] && a[3] <= b[3];
 }
 
 inline bool n_fequal(float f0, float f1, float tol)
